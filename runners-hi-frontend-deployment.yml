@@ -1,0 +1,19 @@
+apiVersion: apps/v1 # resource management object : apps/* 
+kind: Deployment # object type to create
+metadata:
+  name: runners-hi-frontend
+spec:
+  replicas: 2
+  selector: # connect pod and deployment
+    matchLabels:
+      app: runners-hi-frontend
+  template:
+    metadata:
+      labels: 
+        app: runners-hi-frontend
+    spec:
+      containers: # containers in pod
+      - name: frontend
+        image: kimaaaa/runner-hi-frontend:latest
+        ports:
+        - containerPort: 80

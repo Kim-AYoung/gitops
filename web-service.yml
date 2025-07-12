@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: runners-hi-frontend
+spec:
+  selector:
+    app: runners-hi-frontend
+  type: NodePort
+  ports:
+  - protocol: TCP
+    nodePort: 30080
+    port: 80
+    targetPort: 80
+    
