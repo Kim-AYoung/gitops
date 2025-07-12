@@ -5,7 +5,7 @@ metadata:
 spec:
   selector:
     app: runners-hi-frontend
-  type: NodePort
+  type: LoadBalancer
   ports:
   - protocol: TCP
     port: 80
